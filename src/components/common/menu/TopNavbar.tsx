@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TopNavbar = ({ toggleSidebar, title }: any) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
