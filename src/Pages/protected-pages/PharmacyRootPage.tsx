@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import ModuleContainer from "../../components/common/menu/ModuleContainer";
 import AppointmentPage from "./AppointmentPage";
 
+// Pharmacy Route Page
+// This page serves as the root for all pharmacy-related routes
 function PharmacyRootPage() {
   return (
     <Routes>
-        <Route path="/dashboard" element={<ModuleContainer />}>
-            <Route index element={<h1>hello World</h1>} />
-        </Route>
-        <Route path="/appointments" element={<ModuleContainer />}>
-            <Route index element={<AppointmentPage />} />
+        <Route element={<ModuleContainer />}>
+            <Route path="dashboard" element={<h1>hello World</h1>} />
+            <Route path="appointments" element={<AppointmentPage />} />
         </Route>
     </Routes>
   )

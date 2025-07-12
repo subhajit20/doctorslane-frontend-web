@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import CalendarView from '../../components/common/CalendarView';
 import AppointmentStats from '../../components/common/AppointmentStats';
 
@@ -119,6 +119,10 @@ const AppointmentPage = () => {
     // In a real app, this would update the backend
     console.log(`Updating appointment ${appointmentId} status to ${newStatus}`);
   };
+
+  useEffect(() => {
+    document.title = "Pharmacy Appointments - DoctorsLane";
+  }, []);
 
   return (
     <div className="space-y-6">

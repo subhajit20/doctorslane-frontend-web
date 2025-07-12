@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const PharmacyLoginPage = () => {
@@ -12,6 +12,10 @@ const PharmacyLoginPage = () => {
     // For now, we'll just redirect to the dashboard
     navigate('/pharmacy/dashboard');
   };
+
+  useEffect(() => {
+    document.title = "Pharmacy Login - DoctorsLane";
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
